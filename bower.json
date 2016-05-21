@@ -8,7 +8,7 @@
   "main": "_flowtime.scss",
   "moduleType": [],
   "license": "MIT",
-  "homepage": "https://github.com/Snugug/flowtime-theme",
+  "homepage": "https://github.com/Snugug/snugug-flowtime",
   "ignore": [
     "**/.*",
     "node_modules",
