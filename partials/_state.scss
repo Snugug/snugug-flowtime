@@ -1,0 +1,35 @@
+[data-state] {
+  background-size: cover;
+}
+
+%state-cover {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+[data-state='intro'] {
+  @include awesome-header(color($accent, 80), color($accent, 50), 'bottom right');
+
+  h1 {
+    color: $background;
+    text-align: right;
+    @include close-shade(mix($background, black, 16%), #111, 'bottom right', 15);
+  }
+}
+
+[data-state='end'] {
+  @include awesome-header(color('gray', 80), color('gray', 50), 'bottom right');
+
+  color: $background;
+
+  a {
+    color: $background;
+    text-shadow: none;
+
+    &:hover {
+      color: $background;
+    }
+  }
+}

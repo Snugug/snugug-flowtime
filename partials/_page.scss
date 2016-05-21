@@ -1,0 +1,93 @@
+.ft-page {
+  @include clearfix;
+  font-size: 150%;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+
+  &--content {
+    position: relative;
+    top: 50%;
+    transform: translateY(calc(-50% - 1.5rem));
+    padding: 2rem;
+    max-width: 67vw;
+    max-height: 100vh;
+    margin: 0 auto;
+    width: 100%;
+
+    * + * {
+      margin-top: 1rem;
+    }
+  }
+
+  @import 'code';
+  @import 'base';
+
+
+  $raw: (
+    'headings': 'h1' 'h2' 'h3' 'h4' 'h5' 'h6',
+    'text': 'p',
+    'lists': 'ul' 'ol' 'li' 'dl' 'dt' 'dd'
+  );
+
+  %block-and-transition {
+    transition: all 0.2s cubic-bezier(.77, .10, .22, 1);
+  }
+
+  @each $key, $value in $raw {
+    @each $tag in $value {
+      #{$tag} {
+        @extend %block-and-transition;
+      }
+    }
+  }
+
+  %headings {
+    text-align: left;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 1rem 0rem;
+  }
+
+  @each $heading in map-get($raw, 'headings') {
+    #{$heading} {
+      @extend %headings;
+    }
+  }
+
+  h1 {
+    font-size: 3.5em;
+    color: color($accent, 50);
+  }
+
+  h2 {
+    font-size: 2.5em;
+    color: color($accent, 50);
+  }
+
+  h3 {
+    font-size: 2em;
+    color: color($accent, 50);
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 1.75rem;
+    font-weight: bold;
+  }
+
+  figure > img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+
+  .center {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+}

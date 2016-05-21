@@ -1,0 +1,11 @@
+.ft-page-thumb {
+  $dark: color($accent, 70);
+  $light: color-tint($dark, 40);
+  background-color: $dark;
+  border: 1px solid $dark;
+
+  &.actual {
+    background-color: $light;
+    border: 1px solid $dark;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "snugug-flowtime",
+  "version:": "0.0.0",
+  "authors": [
+    "Sam Richard <sam@snug.ug>"
+  ],
+  "description": "Flowtime.js theme, styled via Snugug",
+  "main": "_flowtime.scss",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "https://github.com/Snugug/flowtime-theme",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sass-toolkit": "^2.9.0",
+    "ibm-colors": "~1.5.1",
+    "modular-scale": "^2.1.1",
+    "compass-breakpoint": "breakpoint-sass#^2.6.1",
+    "letterform-shades": "^0.1.0",
+    "blog": "https://github.com/Snugug/blog.git",
+    "Flowtime.js": "flowtime#*"
+  },
+  "version": "0.1.1"
+}
