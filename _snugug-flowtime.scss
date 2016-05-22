@@ -9,6 +9,7 @@
 $background: color('neutral-white', 10);
 $color: color('gray', 80);
 $accent: 'teal' !default;
+$snugug-intro: false !default;
 
 @import 'partials/mixins';
 @import 'partials/html';

@@ -10,7 +10,13 @@
 }
 
 [data-state='intro'] {
-  @include awesome-header(color($accent, 80), color($accent, 50), 'bottom right');
+  @if $snugug-intro {
+    @include awesome-header(#c20030, #da9400, $steps: 10);
+  }
+  @else {
+    @include awesome-header(color($accent, 80), color($accent, 50), 'bottom right');
+  }
+
 
   h1 {
     color: $background;
