@@ -1,0 +1,23 @@
+//////////////////////////////
+// Blink
+//////////////////////////////
+.blink,
+.blink-2,
+.blink-3 {
+  animation: blink 1s steps(5, start) infinite;
+  animation-delay: 0s;
+}
+
+.blink-2 {
+  animation-delay: .1s;
+}
+
+.blink-3 {
+  animation-delay: .2s;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
